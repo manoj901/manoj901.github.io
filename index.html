@@ -8,7 +8,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	
 	title:{
-		text:"Nash-Sutcliffe number of each model with IMD max. temp. data"
+		text:"Nash-Sutcliffe number of each model with IMD max. temp. data",
+		padding: 20,
+       borderThickness: 2,
+	   fontSize: 30,
+	   margin: 40,
 	},
 	axisX:{
 		interval: 1
@@ -16,7 +20,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	axisY2:{
 		interlacedColor: "rgba(1,77,101,.2)",
 		gridColor: "rgba(1,77,101,.1)",
-		title: "Nash-Sutcliffe Number"
+		title: "Nash-Sutcliffe Number",
+		minimum: 0.52
 	},
 	data: [{
 		type: "bar",
