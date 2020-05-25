@@ -1,16 +1,58 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible"content="ie=edge">
-    <script>
-            function gencomp() {
-                document.getElementById("compliment").innerHTML = "Haha";
-            }
-    </script>
-    <title>Compliment Generator</title>
-</head>
-<body onload="gencomp()">
-    <p id ="compliment"></p>
-</body>
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"Nash-Sutcliffe number of each model with IMD max. temp. data"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		title: "Nash-Sutcliffe Number"
+	},
+	data: [{
+		type: "bar",
+		name: "companies",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y:  0.5285, label: "ACCESS" },
+			{ y: 0.5309, label: "BCC-CSM" },
+			{ y: 0.5291, label: "BNU-ESM" },
+			{ y: 0.5298, label: "CANESM" },
+			{ y: 0.5297, label: "CCSM4" },
+			{ y: 0.5405, label: "CESM1-BGC" },
+			{ y: 0.5301, label: "CNRM-CM5" },
+			{ y: 0.53, label: "CSIRO-Mk3-6-0" },
+			{ y: 0.5308, label: "GFDL-ESM2G" },
+			{ y: 0.5297, label: "GFDL-ESM2M" },
+			{ y: 0.5282, label: "INMCM4" },
+			{ y:  0.5297, label: "IPSL-CM5A-LR" },
+			{ y:  0.5302, label: "IPSL-CM5A-MR" },
+			{ y: 0.5307, label: "MICRO_ESM-CHEM" },
+			{ y: 0.5308, label: "MIROC5" },
+			{ y: 0.5287, label: "MPI-ESM-LR" },
+			{ y:  0.5301, label: "MPI-ESM-MR" },
+			{ y: 0.5305, label: "MRI-CGCM3" },
+			{ y: 0.5299, label: "NorESM1-M" }
+		]
+	}]
+});
+chart.render();
 
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 600px; max-width: 920px; margin: 0px auto;float:center;margin-top:100px"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
 </html>
