@@ -1,6 +1,26 @@
 <!DOCTYPE HTML>
 <html>
 <head>  
+<style>
+
+/** Custom styling **/
+
+.back-button {
+  background: rgb(0,128,128);
+  color: white;
+  font-size: 15px;
+  line-height: 1;
+  padding: 20px 30px 15px 25px;
+  text-decoration: none;
+  transition: all 0.2s;
+  left: 50%;
+  margin-right: -50%;
+}
+
+.back-button:hover {
+  background: rgba(0,128,128,0.8);
+}
+</style>
 <script>
 
 window.onload = function () {
@@ -62,6 +82,9 @@ chart.render();
 <body style="background-color:floralwhite;">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div id="chartContainer" style="height: 600px; max-width: 920px; margin: 0px auto;"></div>
+<a class="back-button" href="index.html" style="text-align:center;">
+	&lt;&nbsp;Back
+</a> <!-- /.back-button -->
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>
